@@ -1,0 +1,164 @@
+steps:
+
+  # Intel OneAPI
+  - label: "Intel OneAPI - Python v1.10"
+    plugins:
+      - PythonCI/python#v1:
+          version: "1.10"
+    command: |
+      python -e 'using Pkg
+
+                println("--- :python: Instantiating environment")
+                Pkg.add("Intel OneAPI")
+                Pkg.develop(path=".")
+
+                println("+++ :python: Running tests")
+                Pkg.test("Marsha-H1", test_args=["--Intel OneAPI"])'
+    agents:
+      queue: "pythongpu"
+      cuda: "*"
+    if: build.message !~ /\[skip tests\]/
+    timeout_in_minutes: 60
+
+  - label: "Intel OneAPI - Python v1.11"
+    plugins:
+      - PythonCI/python#v1:
+          version: "1.11"
+    command: |
+      python -e 'using Pkg
+
+                println("--- :python: Instantiating environment")
+                Pkg.add("Intel OneAPI")
+                Pkg.develop(path=".")
+
+                println("+++ :python: Running tests")
+                Pkg.test("Marsha-H1", test_args=["--Intel OneAPI"])'
+    agents:
+      queue: "pythongpu"
+      cuda: "*"
+    if: build.message !~ /\[skip tests\]/
+    timeout_in_minutes: 60
+
+
+  # OpenMP
+  - label: "OpenMP - Python v1.10"
+    plugins:
+      - PythonCI/python#v1:
+          version: "1.10"
+    command: |
+      python -e 'using Pkg
+
+                println("--- :python: Instantiating environment")
+                Pkg.add("OpenMP")
+                Pkg.develop(path=".")
+
+                println("+++ :python: Running tests")
+                Pkg.test("Marsha-H1", test_args=["--OpenMP"])'
+    agents:
+      queue: "pythongpu"
+      rocm: "*"
+      rocmgpu: "*"
+    if: build.message !~ /\[skip tests\]/
+    timeout_in_minutes: 60
+
+  - label: "OpenMP - Python v1.11"
+    plugins:
+      - PythonCI/python#v1:
+          version: "1.11"
+    command: |
+      python -e 'using Pkg
+
+                println("--- :python: Instantiating environment")
+                Pkg.add("OpenMP")
+                Pkg.develop(path=".")
+
+                println("+++ :python: Running tests")
+                Pkg.test("Marsha-H1", test_args=["--OpenMP"])'
+    agents:
+      queue: "pythongpu"
+      rocm: "*"
+      rocmgpu: "*"
+    if: build.message !~ /\[skip tests\]/
+    timeout_in_minutes: 60
+
+
+  # oneAPI
+  - label: "oneAPI - Python v1.10"
+    plugins:
+      - PythonCI/python#v1:
+          version: "1.10"
+    command: |
+      python -e 'using Pkg
+
+                println("--- :python: Instantiating environment")
+                Pkg.add("oneAPI")
+                Pkg.develop(path=".")
+
+                println("+++ :python: Running tests")
+                Pkg.test("Marsha-H1", test_args=["--oneAPI"])'
+    agents:
+      queue: "pythongpu"
+      intel: "*"
+    if: build.message !~ /\[skip tests\]/
+    timeout_in_minutes: 60
+
+  - label: "oneAPI - Python v1.11"
+    plugins:
+      - PythonCI/python#v1:
+          version: "1.11"
+    command: |
+      python -e 'using Pkg
+
+                println("--- :python: Instantiating environment")
+                Pkg.add("oneAPI")
+                Pkg.develop(path=".")
+
+                println("+++ :python: Running tests")
+                Pkg.test("Marsha-H1", test_args=["--oneAPI"])'
+    agents:
+      queue: "pythongpu"
+      intel: "*"
+    if: build.message !~ /\[skip tests\]/
+    timeout_in_minutes: 60
+
+
+  # Metal
+  - label: "Metal - Python v1.10"
+    plugins:
+      - PythonCI/python#v1:
+          version: "1.10"
+    command: |
+      python -e 'using Pkg
+
+                println("--- :python: Instantiating environment")
+                Pkg.add("Metal")
+                Pkg.develop(path=".")
+
+                println("+++ :python: Running tests")
+                Pkg.test("Marsha-H1", test_args=["--Metal"])'
+    agents:
+      queue: "pythonecosystem"
+      os: "macos"
+      arch: "aarch64"
+    if: build.message !~ /\[skip tests\]/
+    timeout_in_minutes: 60
+
+  - label: "Metal - Python v1.11"
+    plugins:
+      - PythonCI/python#v1:
+          version: "1.11"
+    command: |
+      python -e 'using Pkg
+
+                println("--- :python: Instantiating environment")
+                Pkg.add("Metal")
+                Pkg.develop(path=".")
+
+                println("+++ :python: Running tests")
+                Pkg.test("Marsha-H1", test_args=["--Metal"])'
+    agents:
+      queue: "pythonecosystem"
+      os: "macos"
+      arch: "aarch64"
+    if: build.message !~ /\[skip tests\]/
+    timeout_in_minutes: 60
