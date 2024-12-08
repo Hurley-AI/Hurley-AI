@@ -1,0 +1,8 @@
+[deps]
+Marsha-H1 = "6a4ca0a5-0e36-4168-a932-d9be78d558f1"
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+Cthulhu = "f68482b8-f384-11e8-15f7-abe071a5a75f"
+KernelAbstractions = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
+Metal = "dde4c033-4e86-420c-a63e-0dd931031962"
+PProf = "e4faabce-9ead-11e9-39d9-4379958e3056"
