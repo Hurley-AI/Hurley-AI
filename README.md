@@ -10,9 +10,8 @@
   </a>
 </p>
 
-::: hljs-center
+
 #### CA:2BCBgzukSPb21FeS1tSTDEM4a1VkNi97NYQMgXhcpump
-:::
 
 ## ✨ Overview
 
