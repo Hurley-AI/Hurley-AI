@@ -1,6 +1,6 @@
 # 
 <p align="center">
-<img  src="assets/Hurley_Logo.png" alt="Hurley Logo" width="30" height="30" style="vertical-align: middle;"> Hurley AI
+<img  src="assets/Hurley_Logo.png" alt="Hurley Logo" width="100" height="100" style="vertical-align: middle;"> Hurley AI
 
 
 
@@ -11,7 +11,6 @@
 </p>
 
 
-<p align="center">CA:2BCBgzukSPb21FeS1tSTDEM4a1VkNi97NYQMgXhcpump</p>
 
 ## ✨ Overview
 
