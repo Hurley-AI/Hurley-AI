@@ -1,6 +1,6 @@
 # 
 <p align="center">
-<img  src="assets/Hurley_Logo.png" alt="Hurley Logo" width="100" height="100" style="vertical-align: middle;"> Hurley AI
+<img  src="assets/Hurley_Logo.png" alt="Hurley Logo" width="350" height="350" style="vertical-align: middle;">
 
 
 
